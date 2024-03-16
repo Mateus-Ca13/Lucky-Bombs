@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Madimi+One&family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+    --verde-fundo: #0d8676;
+    --verde-card: #31afa3;
+    --verde-esmaecido: #78cfc7;
+    --preto: #000;
+    --sombra: rgba(0, 0, 0, 0.3);
+    --branco: #fff;
+    --amarelo: #f3bc09;
+    --vermelho: rgb(190, 33, 33);
+    --fonte: "Lilita One", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    font-family: var(--fonte);
+    background-color: var(--verde-fundo);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+h1, p {
+    margin: 0;
+}
+
+/* HEADER STYLES =============================================*/
+
+
+.icon {
+    width: 2.5em;
+    height: 2.5em
+
+}
+
+.title {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4em 1em;
+    border-radius: 15px;
+    color: var(--preto);
+    background-color: var(--amarelo);
+    box-shadow: 1px 1px 10px var(--sombra);
+}
+
+/* MAIN STYLES =============================================*/
+
+main {
+    gap: 1em;
+    position: relative;
+}
+
+.card {
+    padding: 1em;
+    border-radius: 15px;
+    background-color: var(--verde-card);
+    box-shadow: 1px 1px 10px var(--sombra);
+}
+
+.headerBetDisplay {
+    margin: 0 0.2em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.comingPrize {
+    margin: 0 0.2em;
+}
+
+.multiplierDisplay {
+    color: var(--branco);
+    margin: 0 0.2em;
+}
+
+.progressBar {
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    width: 90%;
+    height: 15px;
+    background-color: var(--verde-fundo);
+}
+
+.progressValue {
+    border-radius: 5px;
+    display: block;
+    width: 0%;
+    height: 15px;
+    background-color: var(--amarelo);
+    transition: 0.3s all;
+}
+
+.slot {
+    background-color: var(--verde-fundo);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    transition: 0.3s all;
+    
+}
+
+.slot:disabled {
+    background-color: var(--preto);
+    opacity: 0.5;
+}
+
+.slot:hover {
+    opacity: 0.5;
+    transition: 0.3s all;
+}
+
+.circle {
+    width: 40px;
+    opacity: 0.2;
+}
+
+.active:hover {
+    opacity: 1;
+}
+.active img {
+    width: 35px;
+    opacity: 1;
+}
+
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.bombsSelect {
+    background-color: var(--verde-fundo);
+    border-radius: 5px;
+    padding: 0.3em;
+    border: none;
+    font-family: var(--fonte);
+}
+
+.betDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.3em;
+
+}
+
+.betDisplay {
+    gap: 0.3em;
+}
+
+.betAmount {
+    text-align: center;
+    font-family: var(--fonte);
+    background-color: transparent;
+    border-radius: 5px;
+    width: 45px;
+    border: none;
+ 
+}
+
+.amountDiv {
+    margin-top: 0.4em;
+    background-color: var(--verde-esmaecido);
+    border-radius: 5px;
+}
+
+.betButton, .modButton {
+    width: 100%;
+    background-color: var(--amarelo);
+    font-family: var(--fonte);
+    border-radius: 10px;
+    padding: 0.8em 1.5em;
+    border: none;
+    transition: 0.3s all;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px var(--sombra);
+    
+}
+
+.betButton:hover, .modButton:hover, .returnBetButton {
+    opacity: 0.9;
+    transition: 0.3s all;
+}
+
+.returnBetButton {
+    width: 100%;
+    margin-top: 0.2em;
+    background-color: var(--vermelho);
+    font-family: var(--fonte);
+    border-radius: 10px;
+    padding: 0.8em 1.5em;
+    border: none;
+    transition: 0.3s all;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px var(--sombra);
+}
+
+.popUp {
+    display: none;
+ background-color: var(--amarelo);
+ border: 2px solid var(--verde-fundo);
+ padding: 1em 2em;
+ border-radius: 10px;
+ position: absolute;
+ top: 40%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+.visible {
+    display: block;
+}

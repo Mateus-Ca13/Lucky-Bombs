@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/bomb.png">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+    <title>Lucky Bombs</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>Lucky Bombs</h1>
+            <img class="icon" src="/assets/bomb.png" alt="Bomb icon">
+        </div>
+    </header>
+    <main class="center column">
+        <section class="card grid">
+
+            <div class="headerBetDisplay">
+                <div class="center">
+                    <p> Retorno atual: R$<span class="comingPrize" id="comingPrize">--</span></p>
+                    <span class="multiplierDisplay" id="multiplierDisplay"></span>
+                </div>
+                <div>
+                    <label for="bombsSelect">Bombas</label>
+                    <select id="bombsSelect" class="bombsSelect">
+                        <option id="1b">1</option>
+                        <option id="3b">3</option>
+                        <option id="5b">5</option>
+                        <option id="10b">10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="center">
+                <div class="progressBar">
+                    <span class="progressValue" id="progressValue"></span>
+                </div>
+            </div>
+
+
+            <table>
+                <tr>
+                    <td><button disabled id="1" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                    <td><button disabled id="2" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                    <td><button disabled id="3" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                    <td><button disabled id="4" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                    <td><button disabled id="5" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                </tr>
+                <tr>
+                    <td><button disabled id="6" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                    <td><button disabled id="7" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                    <td><button disabled id="8" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                    <td><button disabled id="9" class="slot"><img src="/assets/circle.png" class="circle"></button></td>
+                    <td><button disabled id="10" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button disabled id="11" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="12" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="13" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="14" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="15" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button disabled id="16" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="17" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="18" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="19" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="20" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button disabled id="21" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="22" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="23" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="24" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                    <td><button disabled id="25" class="slot"><img src="/assets/circle.png" class="circle"></button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="card options center">
+            <div class="betDiv column">
+                <div>
+                    <button id="betButton" class="betButton">APOSTAR</button>
+                </div>
+                <div>
+                    <button disabled id="returnBetButton" class="returnBetButton">RETORNAR</button>
+                </div>
+            </div>
+            <div>
+                <div class="center betDisplay">
+                    <button id="less" class="modButton">-</button>
+                    <div class="modButton center">R$<input class="betAmount " type="text" id="betAmount" value="1.00">
+                    </div>
+                    <button id="plus" class="modButton">+</button>
+                </div>
+                <div class=" amountDiv">
+                    Montante:
+                    <div class="center">R$<p id="amount">50.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="popUp">
+            <h3>Atenção!</h3>
+            <p id="message"></p>
+        </div>
+
+
+
+    </main>
+    <script src="betMultiplier.js"></script>
+    <script src="/setBet.js"></script>
+    <script src="/setSlots.js"></script>
+    <script src="slotAction.js"></script>
+    <script src="returnBet.js"></script>
+    <script src="betInput.js"></script>
+    <script src="popUp.js"></script>
+</body>
+
+</html>
