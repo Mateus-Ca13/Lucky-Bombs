@@ -17,12 +17,18 @@ betButton.addEventListener('click', () => {
     if (intBetAmount < intValueAmount) {
 
         if (intBetAmount >= 1) {
+            if(/^[0-9.]+$/.test(betAmount.value)) {
+
             console.log(typeof (intBetAmount))
             restoreSlots();
             setSlots()
             setInitialMultiplier(bombSlots.length)
             lockDisplay(true);
             setMoneyAmount(intValueAmount - intBetAmount);
+            } else {
+                warningPopUp("O valor apostado não deve conter letras!")
+            }
+            
         } else {
             warningPopUp("O valor mínimo de aposta é de 1 real!")
         }
