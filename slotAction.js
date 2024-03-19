@@ -7,10 +7,10 @@ slots.forEach((slot) => slot.addEventListener('click', (e) => {
     
     
     if(bombSlots.includes(selectedSlot) ) {
-        slotsActivated.includes(slot)
+        /*slotsActivated.includes(slot)
         selectedSlot.children[0].src = "./assets/bomb.png"
         lockDisplay(false);
-        resetPrize();
+        resetPrize(); */
         
         
     } 
@@ -18,7 +18,12 @@ slots.forEach((slot) => slot.addEventListener('click', (e) => {
         if (!slotsActivated.includes(slot)) {
             slotsActivated.push(slot)
             selectedSlot.children[0].src = "./assets/coin.png";
-            updateMultiplier();
+            updateMultiplier(bombSlots.length);
+
+            if (slotsActivated.length == coinSlots) {
+                
+                returnPrize ();
+            }
         } 
 
     } 
