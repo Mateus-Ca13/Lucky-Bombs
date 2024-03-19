@@ -15,7 +15,7 @@ function setInitialMultiplier (bombs) {
     
     prizeAmount = intBetAmount
     multiplierDisplay.textContent = "x1.0"
-    prizeDisplay.textContent = intBetAmount.toFixed(2)
+    prizeDisplay.textContent = `R$${intBetAmount.toFixed(2)}`;
 };
 
 function updateMultiplier (bombs) {
@@ -27,8 +27,8 @@ function updateMultiplier (bombs) {
     
     upProgress ()
     multiplierDisplay.textContent = `x${multiplier}`
-    prizeDisplay.textContent = prizeAmount.toFixed(2)
-};
+    prizeDisplay.textContent = `R$${prizeAmount.toFixed(2)}`
+}
 
 function resetPrize () {
     multiplier = 0;

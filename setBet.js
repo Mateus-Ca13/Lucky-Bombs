@@ -14,7 +14,7 @@ betButton.addEventListener('click', () => {
     var intValueAmount = parseFloat(valueAmount.textContent).toFixed(2);
     intBetAmount = parseFloat(betAmount.value)
 
-    if (intBetAmount < intValueAmount) {
+    if (intBetAmount <= intValueAmount) {
 
         if (intBetAmount >= 1) {
             if(/^[0-9.]+$/.test(betAmount.value)) {
